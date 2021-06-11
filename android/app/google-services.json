@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "529351241494",
+    "project_id": "threepai",
+    "storage_bucket": "threepai.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529351241494:android:2dc3146e2bca270869ea37",
+        "android_client_info": {
+          "package_name": "com.example.three_pai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529351241494-uhln1gp8a83dm873f612g4fh7tba1j3v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2Z7pODFoT8XotO39rmTcsG42oXt-7EhM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529351241494-uhln1gp8a83dm873f612g4fh7tba1j3v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
