@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:three_pai/myclasses.dart';
+import 'package:three_pai/profile.dart';
+import 'package:three_pai/recommended.dart';
+
+import 'math.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -11,24 +16,71 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {
-            print("Menu Tapped!");
-          },
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor,
+              ),
+              child: Center(
+                child: Text('Menu'),
+              ),
+            ),
+            ListTile(
+              title: Text('My Profile'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProfilePage()),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('My Classes'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyClass()),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('Recommended'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RecommendedPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('Dashboard'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
         ),
+      ),
+      appBar: AppBar(
         actions: <Widget>[
           Padding(
             padding: EdgeInsets.only(right: 7.0),
             child: IconButton(
-              icon: Icon(
-                Icons.account_circle,
-              ),
-              onPressed: () {
-                print("Profile Tapped!");
-              },
-            ),
+                icon: Icon(
+                  Icons.account_circle,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ProfilePage()),
+                  );
+                }),
           ),
         ],
         title: Center(
@@ -99,7 +151,11 @@ class _HomePageState extends State<HomePage> {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              print("Profile Tapped!");
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ProfilePage()),
+                              );
                             },
                             child: Text("My Profile"),
                             style: ElevatedButton.styleFrom(
@@ -119,8 +175,11 @@ class _HomePageState extends State<HomePage> {
                             textScaleFactor: 2,
                           ),
                           onTap: () {
-                            print("My Classes Tapped!");
-                            // Goto My Classes Screen
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ProfilePage()),
+                            );
                           },
                         ),
                       ),
@@ -166,8 +225,10 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                             onTap: () {
-                              print("Math Card Tapped!");
-                              // Goto Subject screen
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => math()),
+                              );
                             },
                           ),
                         ],
@@ -185,7 +246,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           onTap: () {
                             print("My Recommended Tapped!");
-                            // Goto My Classes Screen
+                            // Show list of recommended subject cards
                           },
                         ),
                       ),
