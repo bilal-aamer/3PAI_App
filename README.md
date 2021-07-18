@@ -1,16 +1,25 @@
-# three_pai
+# 3PAI Application (Basic)
 
-A new Flutter project.
+## 3PAI Backdrop
 
-## Getting Started
+A Personalized Passion and Proficiency Based Educational Model using Deep Learning using PyTorch.
 
-This project is a starting point for a Flutter application.
+## Frontend - Flutter
 
-A few resources to get you started if this is your first Flutter project:
+The Application is built using the Flutter SDK using the Dart language implemented using OOP stadard.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Some of the screens are listed below:
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Backend - Python
+
+## Frameworks
+
+The following frameworks are used:
+
+1) Firebase Authentication
+2) Cloud Firestore
+3) Flutter SDK
+4) Firebase Analytics
+
+
+
